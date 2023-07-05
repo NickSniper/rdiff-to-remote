@@ -1,11 +1,9 @@
-# nicksniper2/rdiff-to-remote-server
-
-<https://github.com/NickSniper/rdiff-to-remote-server>
+# nicksniper2/rdiff-to-remote
 
 Available as:
 
-* [`nicksniper2/rdiff-to-remote-server`](https://hub.docker.com/r/nicksniper2/rdiff-to-remote-server)
-* [`github.com/NickSniper/rdiff-to-remote-server`](https://github.com/NickSniper/rdiff-to-remote-server)
+* [`nicksniper2/rdiff-to-remote`](https://hub.docker.com/r/nicksniper2/rdiff-to-remote)
+* [`github.com/NickSniper/rdiff-to-remote`](https://github.com/NickSniper/rdiff-to-remote)
 
 ## Description
 
@@ -39,17 +37,18 @@ rest of the remote machine is ignored. Any `cache` folders will be ignored every
 [rdiff-backup man page](http://www.nongnu.org/rdiff-backup/rdiff-backup.1.html)
 for more information on the format of this file.
 
-
 Used environment variables:
- * `RDIFF_BACKUP_TARGET` – remote server where backup will be stored;
+ * `RDIFF_BACKUP_TARGET` – variable, emote server where backup will be stored;
    example: `user@example.com::/storage/folder`
- * `/config` - the folder where configurations files stored
-   example: `/etc/rdiff-to-remote-server`, or `/mnt/user/appdata/rdiff-to-remote-server`
- * `/host` - the folder from which the files/folders are sourced. If it is "/", then it refers to the root directory. 
+* `TZ` - variable, time zone. 
+   example: `TZ=Europe/Copenhagen`
+ * `/config` - path, the folder where configurations files stored
+   example: `/etc/rdiff-to-remote`, or `/mnt/user/appdata/rdiff-to-remote`
+ * `/host` - path, the folder from which the files/folders are sourced. If it is "/", then it refers to the root directory.
    If, for example, it is "/etc", then "/host" inside the Docker container will be equivalent only to the folders inside "/etc".
 
-You should copy your ~/.ssh folder from your ~/.ssh folder to a config folder, to .ssh to make it able 
-to connect to the remote server. 
+You should copy your ~/.ssh folder from your ~/.ssh folder to a config folder, to .ssh to make it able
+to connect to the remote server.
 
 As another option, a SSH key pair should be generated:
 
