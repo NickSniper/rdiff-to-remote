@@ -1,1 +1,1 @@
-0 5 * * * /bin/sh /bin/backup.sh
+0 4 * * * /bin/sh /bin/backup.sh
